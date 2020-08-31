@@ -34,7 +34,7 @@ public class GracefulAutoConfiguration {
     /**
      * 显示申明监听事件类型,不能使用lambda表达式
      *
-     * @author ty
+     * @author zjl
      */
     public static class GracefulApplicationListener implements ApplicationListener<ContextClosedEvent> {
         private final List<Graceful> gracefulList;

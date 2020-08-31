@@ -26,7 +26,7 @@ import static com.msc.microservices.common.util.ThreadHolderUtil.TRACE_KEY;
 /**
  * 监控慢SQL插件
  *
- * @author ty
+ * @author zjl
  */
 @Intercepts({
         @Signature(type = StatementHandler.class, method = "update", args = {Statement.class}),
