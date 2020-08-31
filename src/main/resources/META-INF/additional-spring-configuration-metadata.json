@@ -1,0 +1,49 @@
+{
+  "groups": [
+    {
+      "name": "sql.metric"
+    },
+    {
+      "name": "spring.mvc"
+    },
+    {
+      "name": "web"
+    },
+    {
+      "name": "feign.request"
+    }
+  ],
+  "properties": [
+    {
+      "name": "sql.metric.enable",
+      "type": "java.lang.Boolean",
+      "defaultValue": false,
+      "description": "enable sql metric."
+    },
+    {
+      "name": "sql.metric.boundary",
+      "type": "java.lang.Integer",
+      "defaultValue": 5,
+      "description": "sql metric stopWatch boundary."
+    },
+    {
+      "name": "spring.mvc.auto",
+      "type": "java.lang.Boolean",
+      "defaultValue": "false",
+      "description": "是否启用spring mvc通用自动化配置."
+    },
+    {
+      "name": "web.businessCode",
+      "type": "java.lang.String",
+      "defaultValue": null,
+      "description": "唯一系统业务码."
+    },
+    {
+      "name": "web.rest-advice",
+      "type": "java.lang.Boolean",
+      "defaultValue": true,
+      "description": "是否开启RestController统一异常处理."
+    }
+  ],
+  "hints": []
+}

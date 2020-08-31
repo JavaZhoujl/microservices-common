@@ -1,0 +1,9 @@
+org.springframework.boot.env.EnvironmentPostProcessor=\
+com.msc.microservices.common.spring.config.FreePortEnvironmentPostProcessor
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.msc.microservices.common.redis.RedisLockAutoConfiguration,\
+com.msc.microservices.common.web.mvc.WebMvcAutoConfiguration,\
+com.msc.microservices.common.server.TomcatServerAutoConfiguration,\
+com.msc.microservices.common.spring.config.SpringContextAutoConfiguration,\
+com.msc.microservices.common.server.TomcatGracefulAutoConfiguration,\
+com.msc.microservices.common.system.GracefulAutoConfiguration
