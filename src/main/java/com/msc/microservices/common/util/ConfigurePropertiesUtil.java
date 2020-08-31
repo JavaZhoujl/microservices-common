@@ -1,8 +1,8 @@
 //package com.msc.microservices.common.util;
 //
 //import com.ctrip.framework.apollo.ConfigService;
-//import com.epet.microservices.common.web.ResponseBody;
 //import com.msc.microservices.common.web.ResponseBody;
+//
 //import org.springframework.beans.factory.config.YamlPropertiesFactoryBean;
 //import org.springframework.core.io.ClassPathResource;
 //import org.springframework.core.io.support.EncodedResource;
@@ -12,7 +12,7 @@
 //import java.util.Properties;
 //
 ///**
-// * 系统配置properties工具类
+// * 系统配置properties工具类(获取配置中心的相关配置并提供公共方法目前支持Apollo)
 // *
 // * @author zjl
 // */
