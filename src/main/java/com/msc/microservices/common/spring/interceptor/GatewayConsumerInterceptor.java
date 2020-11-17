@@ -14,27 +14,15 @@ import javax.servlet.http.HttpServletResponse;
  * @author zjl
  */
 public class GatewayConsumerInterceptor implements HandlerInterceptor {
+
     private static final String CONSUMER_ID = "x-consumer-id";
-    private static final String CONSUMER_CUSTOM_ID = "x-consumer-custom-id";
-    private static final String CONSUMER_USERNAME = "x-consumer-username";
-    public static final String CONSUMER_ID_KEY = ThreadHolderUtil.CONSUMER_ID_KEY;
-    public static final String CONSUMER_CUSTOM_ID_KEY = ThreadHolderUtil.CONSUMER_CUSTOM_ID_KEY;
-    public static final String CONSUMER_USERNAME_KEY = ThreadHolderUtil.CONSUMER_USERNAME_KEY;
+    private static final String CONSUMER_CUSTOM_ID = "userId";
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        // TODO 为了保证兼容,暂时不变,后续切换为CONSUMER_ID
         String consumerId = request.getHeader(CONSUMER_CUSTOM_ID);
         if (StringUtils.isNotBlank(consumerId)) {
-            ThreadHolderUtil.setValue(CONSUMER_ID_KEY, consumerId);
-        }
-        String consumerCustomId = request.getHeader(CONSUMER_CUSTOM_ID);
-        if (StringUtils.isNotBlank(consumerCustomId)) {
-            ThreadHolderUtil.setValue(CONSUMER_CUSTOM_ID_KEY, consumerCustomId);
-        }
-        String consumerUsername = request.getHeader(CONSUMER_USERNAME);
-        if (StringUtils.isNotBlank(consumerUsername)) {
-            ThreadHolderUtil.setValue(CONSUMER_USERNAME_KEY, consumerUsername);
+            ThreadHolderUtil.setValue(CONSUMER_ID, consumerId);
         }
         return true;
     }
